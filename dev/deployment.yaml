@@ -15,3 +15,31 @@ spec:
       containers:
       - name: 42app
         image: wil42/playground:v2
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: 42app-service
+spec:
+  ports:
+    - name: http
+      port: 8888
+      targetPort: 8888
+      protocol: TCP
+  selector:
+    app: 42app
+  type: LoadBalancer
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: app42-service
+#   labels: 42app
+# spec:
+#   type: LoadBalancer
+#   selector:
+#     app: 42app
+#   ports:
+#   - name: http
+#     port: 8888
+#     targetPort: 8888
+#     hostNetwork: true
