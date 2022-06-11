@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: 42app
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,4 +16,4 @@ spec:
       - name: 42app
         image: wil42/playground:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 8888
