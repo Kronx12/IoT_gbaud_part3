@@ -23,11 +23,9 @@ apiVersion: v1
 metadata:
   name: app42-service
 spec:
-  ports:
-    - name: http
-      port: 8888
-      targetPort: 8888
-      protocol: TCP
   selector:
     app: app42
+  ports:
+    - port: 8888
+      targetPort: 8888
   type: LoadBalancer
