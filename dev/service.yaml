@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: 42app-service
+  name: app42-service
 spec:
   selector:
     app: 42app
