@@ -18,15 +18,15 @@ spec:
         ports:
         - containerPort: 8888
 ---
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   name: app42-service
-# spec:
-#   type: LoadBalancer
-#   selector:
-#     app: app42
-#   ports:
-#     - protocol: TCP
-#       port: 8888
-#       targetPort: 8888
+kind: Service
+apiVersion: v1
+metadata:
+  name: app42-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: app42
+  ports:
+    - protocol: TCP
+      port: 8888
+      targetPort: 8888
