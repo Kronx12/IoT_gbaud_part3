@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: app42-service
 spec:
+type: NodePort
   selector:
     app: 42app
   ports:
-  - protocol: TCP
-    port: 8888
+  - port: 8888
     targetPort: 8888
+    nodePort: 8888
